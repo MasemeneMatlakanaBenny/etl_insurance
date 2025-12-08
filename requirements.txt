@@ -1,1 +1,5 @@
-
+pandas
+dotenv
+sqlalchemy
+prefect
+great_expectations
