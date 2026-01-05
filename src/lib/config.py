@@ -1,5 +1,6 @@
 import pandas as pd
 import great_expectations as gx
+from great_expectations.core import ExpectationConfiguration
 from typing import List
 
 
@@ -61,7 +62,7 @@ def create_max_expectations(column_name:str,min_value,max_value):
 
     return max_exp
 
-def validate_expectations(batch,expectations,labels:List[str])->pd.DataFrame:
+def validate_expectations(batch,expectations:List[ExpectationConfiguration],labels:List[str])->pd.DataFrame:
     """
     Run the expectations and validate them with the use of the batch 
     and get the results
